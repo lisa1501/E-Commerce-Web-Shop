@@ -36,17 +36,16 @@ const Cart = ({ cart, handleUpdateCartQty,handleRemoveFromCart,handleEmptyCart }
                     <Button className={classes.emptyButton} size="large" type="button" variant="contained" color="secondary" onClick={handleEmptyCart}>
                         Empty Cart
                     </Button>
-                    <Button className={classes.checkoutButton} component={Link} to="/checkout"size="large" type="button" variant="contained" color="primary">
+                    <Button className={classes.checkoutButton} component={Link} to="/checkout" size="large" type="button" variant="contained" color="primary">
                         Checkout
                     </Button>
                 </div>
-
-
             </div>
         </>
-
     )
+
     if(!cart.line_items) return 'Loading...';
+    
     return (
         <Container>
             <div className={classes.toobar}/>
@@ -55,7 +54,6 @@ const Cart = ({ cart, handleUpdateCartQty,handleRemoveFromCart,handleEmptyCart }
             </Typography>
             { !cart.line_items.length ? <EmptyCart /> : <FilledCart />}
         </Container>
-
     )
 }
 

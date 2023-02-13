@@ -19,9 +19,9 @@ const FormInput = ({ name, label, required}) => {
                 fullWidth
             />
         )}
-      />
+        />
     </Grid>
-  );
+    );
 }
 
 export default FormInput;

@@ -3,10 +3,7 @@ import { Typography, List, ListItem, ListItemText } from '@material-ui/core';
 import Product from '../Products/Product/Product';
 
 const Review = ({checkoutToken}) => {
-    console.log(checkoutToken)
-  
-    console.log(checkoutToken.line_items)
-  return (
+    return (
     <>
         <Typography variant='h6' gutterBottom>Order summary</Typography>
         <List disablePadding>
@@ -24,7 +21,7 @@ const Review = ({checkoutToken}) => {
             </ListItem>
         </List>
     </>
-  )
+    )
 }
 
 export default Review

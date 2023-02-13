@@ -16,12 +16,9 @@ import useStyles from './styles';
                         <Product product={product} onAddToCart={onAddToCart}/>
                     </Grid>
                 ))}
-                
-
             </Grid>
         </main>
     )
-    
 }
 
 export default Products
