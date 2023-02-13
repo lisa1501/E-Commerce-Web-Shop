@@ -6,10 +6,20 @@ import PaymentForm from '../PaymentForm';
 import { commerce } from '../../../lib/commerce';
 import { Link, useNavigate } from 'react-router-dom';
 
-
 const steps = ['Shipping address', 'Payment details'];
 
-const Checkout = ({cart, order,onCaptureCheckout,error}) => {
+const Checkout = ({cart, order,onCaptureCheckout,error,handleEmptyCart}) => {
+    console.log(cart)
+
+    // for Payment Method without card , just for testing payment method
+    // temp enter card detail:42424.....
+    if(!order.customer){
+        cart.line_items.map((item) =>(
+            handleEmptyCart(item.id)
+            
+            ))
+    }
+    
     const classes = useStyles();
     const history = useNavigate();
     const [isFinished, setIsFinished] = useState(false)
@@ -30,12 +40,12 @@ const Checkout = ({cart, order,onCaptureCheckout,error}) => {
         }
         generateToken();
     },[cart]);
+    
 
     const nextStep = () => setActiveStep((prevActiveStep) => prevActiveStep + 1);
     const backStep = () => setActiveStep((prevActiveStep) => prevActiveStep - 1);
     const next = (data) => {
         setShippingData(data);
-
         nextStep();
     }
 
@@ -44,7 +54,7 @@ const Checkout = ({cart, order,onCaptureCheckout,error}) => {
             setIsFinished(true)
         },3000);
     } 
-
+    
     let Confirmation = () => order.customer ? (
         <>
             <div>
@@ -55,17 +65,20 @@ const Checkout = ({cart, order,onCaptureCheckout,error}) => {
                 <Typography variant='subtitle2'>Order ref: {order.customer_reference}</Typography>
                 
             </div>
+            
             <br />
-                <Button component={Link} to="/" variant="outlined" type="button">Back to Home</Button>
+    
+                <Button component={Link} to="/" variant="outlined" type="button" >Back to Home</Button>
         </>
     ):isFinished ?(
-        <>
+        
+        <>  
             <div>
                 <Typography variant='h5'>Thank you for your purchase</Typography>
                 <Divider className={classes.divider}/>
             </div>
             <br />
-                <Button component={Link} to="/" variant="outlined" type="button">Back to Home</Button>
+            <Button component={Link} to="/" variant="outlined" type="button" >Back to Home</Button>
         </>
     ):(
         <div className={classes.spinner}>
@@ -75,11 +88,11 @@ const Checkout = ({cart, order,onCaptureCheckout,error}) => {
 
     if(error){
         <>
-        <Typography variant="h5">Error: {error}</Typography>
-        <br />
-        <Button component={Link} to="/" variant="outlined" type="button">
-            Back to Home
-        </Button>
+            <Typography variant="h5">Error: {error}</Typography>
+            <br />
+            <Button component={Link} to="/" variant="outlined" type="button">
+                Back to Home
+            </Button>
         </>
     }
         
@@ -89,8 +102,9 @@ const Checkout = ({cart, order,onCaptureCheckout,error}) => {
                         nextStep={nextStep}
                         backStep={backStep} 
                         onCaptureCheckout={onCaptureCheckout}
-                        timeout={timeout} />
-
+                        timeout={timeout}
+                        
+                        />
     return (
         <>
             <CssBaseline />

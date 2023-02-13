@@ -11,44 +11,37 @@ const App = () => {
 
     const fetchProducts = async () =>{
         const { data } = await commerce.products.list();
-
         setProducts(data);
     }
 
     const fetchCart = async () => {
-
         setCart(await commerce.cart.retrieve());
     }
 
     const handlleAddToCart = async (productId, quantity) =>{
         const item = await commerce.cart.add(productId, quantity);
-
         setCart(item)
     }
 
     const handleUpdateCartQty = async (productId, quantity) => {
         const  item  = await commerce.cart.update(productId, { quantity });
-    
         setCart(item);
     };
 
     const handleRemoveFromCart = async (productId) =>{
         const  item  = await commerce.cart.remove(productId);
-    
         setCart(item);
     }
 
 
     const handleEmptyCart = async (productId) =>{
         const  item  = await commerce.cart.empty(productId);
-    
         setCart(item);
     }
 
     const refreshCart = async() =>{
         const newCart = await commerce.cart.refresh();
         setCart(newCart)
-
     }
 
     const handleCaptureCheckout = async (checkoutTokenId, newOrder) => {
@@ -86,6 +79,7 @@ const App = () => {
                     order={order}
                     onCaptureCheckout={handleCaptureCheckout}
                     error={errorMessage}
+                    handleEmptyCart={handleEmptyCart}
                     />}/>
                 </Routes>
             </div>
