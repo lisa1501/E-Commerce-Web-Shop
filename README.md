@@ -83,7 +83,7 @@ After clicking the shopping cart where on the topright coner of the manin page, 
 <br>
 
 ![image](https://github.com/lisa1501/E-Commerce-Web-Shop/blob/main/images/cart.png)
-###  - Delete item
+###  - Update item
 <br>
 
 ```javascript
@@ -157,8 +157,9 @@ After clicking the checkout button, users will be asked to finish two forms, shi
 
 ![image](https://github.com/lisa1501/E-Commerce-Web-Shop/blob/main/images/addressform.png)
 ![image](https://github.com/lisa1501/E-Commerce-Web-Shop/blob/main/images/paymentform.png)
+![image]https://github.com/lisa1501/E-Commerce-Web-Shop/blob/main/images/confirmation.png)
 
-###  - Delete item
+###  - payment confirmation
 <br>
 
 ```javascript
@@ -212,5 +213,4 @@ After clicking the checkout button, users will be asked to finish two forms, shi
  
 ```
 
-![image]https://github.com/lisa1501/E-Commerce-Web-Shop/blob/main/images/confirmation.png)
 <br>
