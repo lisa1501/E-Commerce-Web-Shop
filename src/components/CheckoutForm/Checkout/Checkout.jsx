@@ -94,7 +94,6 @@ const Checkout = ({cart, order,onCaptureCheckout,error,handleEmptyCart}) => {
                         backStep={backStep} 
                         onCaptureCheckout={onCaptureCheckout}
                         timeout={timeout}
-                        
                         />
     return (
         <>
