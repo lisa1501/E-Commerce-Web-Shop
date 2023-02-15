@@ -149,17 +149,18 @@ const EmptyCart = () => (
  
 ```
 <br>
+
 ## Checkout
 After clicking the checkout button, users will be asked to finish two forms, shipping address, and payment details. After successfully completing these two forms, Commerce.js send a confirmation email both to the customer and the store. For this project, I used a stripe demo card for payment and navigate to confirm page.
-
 
 <br>
 
 ![image](https://github.com/lisa1501/E-Commerce-Web-Shop/blob/main/images/addressform.png)
 ![image](https://github.com/lisa1501/E-Commerce-Web-Shop/blob/main/images/paymentform.png)
-![image]https://github.com/lisa1501/E-Commerce-Web-Shop/blob/main/images/confirmation.png)
+
 
 ###  - payment confirmation
+![image]https://github.com/lisa1501/E-Commerce-Web-Shop/blob/main/images/confirmation.png)
 <br>
 
 ```javascript
