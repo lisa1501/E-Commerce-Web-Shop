@@ -9,17 +9,7 @@ import { Link, useNavigate } from 'react-router-dom';
 const steps = ['Shipping address', 'Payment details'];
 
 const Checkout = ({cart, order,onCaptureCheckout,error,handleEmptyCart}) => {
-    console.log(cart)
 
-    // for Payment Method without card , just for testing payment method
-    // temp enter card detail:42424.....
-    if(!order.customer){
-        cart.line_items.map((item) =>(
-            handleEmptyCart(item.id)
-            
-            ))
-    }
-    
     const classes = useStyles();
     const history = useNavigate();
     const [isFinished, setIsFinished] = useState(false)
@@ -31,7 +21,7 @@ const Checkout = ({cart, order,onCaptureCheckout,error,handleEmptyCart}) => {
         const generateToken = async () => {
             try {
                 const token = await commerce.checkout.generateToken(cart.id, {type:'cart'});
-                // console.log(token)
+                console.log(token)
                 setCheckoutToken(token)
             } catch (error){
                 history.pushState('/')
@@ -48,10 +38,11 @@ const Checkout = ({cart, order,onCaptureCheckout,error,handleEmptyCart}) => {
         setShippingData(data);
         nextStep();
     }
-
+    // user use Stripe demo card ,424242.... 
     const timeout = () =>{
         setTimeout(() =>{
             setIsFinished(true)
+            handleEmptyCart(cart)
         },3000);
     } 
     
