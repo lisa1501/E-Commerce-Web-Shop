@@ -160,7 +160,8 @@ After clicking the checkout button, users will be asked to finish two forms, shi
 
 
 ###  - payment confirmation
-![image]https://github.com/lisa1501/E-Commerce-Web-Shop/blob/main/images/confirmation.png)
+
+
 <br>
 
 ```javascript
@@ -214,4 +215,9 @@ After clicking the checkout button, users will be asked to finish two forms, shi
  
 ```
 
-<br>
+ <br>
+
+![image](https://github.com/lisa1501/E-Commerce-Web-Shop/blob/main/images/confirmation.png)
+
+ <br>
+
