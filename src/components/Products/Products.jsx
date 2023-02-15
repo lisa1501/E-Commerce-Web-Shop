@@ -4,9 +4,9 @@ import Product from './Product/Product';
 
 import useStyles from './styles';
 
-    const Products = ({ products,onAddToCart }) => {
+const Products = ({ products,onAddToCart }) => {
         // console.log(products)
-        const classes = useStyles();
+    const classes = useStyles();
     return (
         <main className={classes.content}>
             <div className={classes.toolbar}/>
