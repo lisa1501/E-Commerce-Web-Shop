@@ -38,7 +38,10 @@ const Checkout = ({cart, order,onCaptureCheckout,error,handleEmptyCart}) => {
         setShippingData(data);
         nextStep();
     }
-    // user use Stripe demo card ,424242.... 
+    // user use Stripe demo card 
+    // card number: 4242 4242 4242 4242    MM/AA:04 / 24
+    // CVC: 242    CAP: 42424
+
     const timeout = () =>{
         setTimeout(() =>{
             setIsFinished(true)
