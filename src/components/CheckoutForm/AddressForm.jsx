@@ -5,6 +5,7 @@ import { commerce } from '../../lib/commerce';
 import FormInput from './FormInput';
 import { Link } from 'react-router-dom';
 
+
 const AddressForm = ({ checkoutToken, next }) => {
     const [shippingCountries, setShippingCountries] = useState([]);
     const [shippingCountry, setShippingCountry] = useState('');
