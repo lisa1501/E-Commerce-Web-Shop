@@ -1,6 +1,18 @@
 # Welcome To MyOffice
 MyOffice is an e-commerce shopping application that allows users to easily shop online. Users can add items to the shopping cart, edit the item total number, delete items from cart or empty shopping cart. After users provide their shipping address information, user can enter bank card details. After users successfully finish the payment process, Commerce.js send a confirmation email both to the customer and the store. 
 <br>
+## Installation
+
+- `git clone <this_url> && cd <repo_name>`
+- install npm in the terminals
+  - `npm install`
+ - in your terminal, run npm start
+- Next create a .env file in current directory. It should contain the following information.
+```bash
+  REACT_APP_CHEC_PUBLIC_KEY=' '
+  REACT_APP_STRIPE_PUBLIC_KEY=' '
+  
+```
 # Technologies Used
 The main logic of MyOffice was used commerce.js. The front end was created using Javascript and rendered using React. React was chosen for this project due to its lite footprint, quick response times to maximize user experience especially when there may be multiple query's happening per page, and strong ecosystem backing and support especially around libraries and other recourses to help maximize efficiency. The Site was styled with the use of CSS modules.
 <br>
