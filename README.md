@@ -3,7 +3,8 @@ MyOffice is an e-commerce shopping application that allows users to easily shop 
 <br>
 ## Installation
 
-- `git clone <this_url> && cd <repo_name>`
+- `git clone https://github.com/lisa1501/E-Commerce-Web-Shop.git`
+- `cd E-Commerce-Web-Shop`
 - install npm in the terminals
   - `npm install`
  - in your terminal, run npm start
