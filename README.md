@@ -10,8 +10,8 @@ MyOffice is an e-commerce shopping application that allows users to easily shop 
  - in your terminal, run npm start
 - Next create a .env file in current directory. It should contain the following information.
 ```bash
-  REACT_APP_CHEC_PUBLIC_KEY=' '
-  REACT_APP_STRIPE_PUBLIC_KEY=' '
+  REACT_APP_CHEC_PUBLIC_KEY=
+  REACT_APP_STRIPE_PUBLIC_KEY=
   
 ```
 # Technologies Used
